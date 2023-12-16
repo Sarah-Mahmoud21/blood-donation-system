@@ -1,0 +1,82 @@
+/* Reception */
+
+
+create table Reception (
+	RID VARCHAR(8) CONSTRAINT Reception_RID_PK PRIMARY KEY
+);
+
+
+/* Donator */
+
+
+create table Donators (
+	DID VARCHAR(8) CONSTRAINT Donators_DID_PK PRIMARY KEY,
+	DoRID VARCHAR2(8),
+	DonatorName VARCHAR2(20),
+	DOB Date,
+	LastDonationDate Date,
+	Address VARCHAR2(25),
+	Phone Number(14),
+	Gender CHAR(1),
+	CONSTRAINT Donators_Gender_Check CHECK((Gender='M') or (Gender='F')),
+    	CONSTRAINT Donators_RID_FK FOREIGN KEY(DoRID) REFERENCES Reception(RID)
+	ON DELETE SET NULL
+);
+
+
+/* Patient */
+
+
+create table Patients (
+	PID VARCHAR(8) CONSTRAINT Patients_PID_PK PRIMARY KEY,
+	PaRID VARCHAR2(8),
+	PatientName VARCHAR2(20),
+	DOB Date,
+	Address VARCHAR2(25),
+	Phone Number(14),
+	Gender CHAR(1),
+	CONSTRAINT Patients_Gender_Check CHECK((Gender='M') or (Gender='F'))
+	CONSTRAINT Patients_RID_FK FOREIGN KEY(PaRID) REFERENCES Reception(RID)
+	ON DELETE SET NULL
+);
+
+
+/* Nurse */
+
+
+create table Nurses (
+	NID VARCHAR(8) CONSTRAINT Nurses_DID_PK PRIMARY KEY,
+	NuRID VARCHAR2(8),
+	NurseName VARCHAR2(20),
+	CONSTRAINT Nurses_RID_FK FOREIGN KEY(NuRID) REFERENCES Reception(RID)
+	ON DELETE SET NULL
+);
+
+
+/* Lab */
+
+
+create table Lab (
+	LID VARCHAR(8) CONSTRAINT LAB_LID_PK PRIMARY KEY,
+	LabRID VARCHAR2(8),
+	BloodType VARCHAR2(3),
+	HealthCond VARCHAR2(7),
+	CONSTRAINT LAB_RID_FK FOREIGN KEY(LabRID) REFERENCES Reception(RID)
+	ON DELETE SET NULL,
+     	CONSTRAINT Lab_Health_Check CHECK((HealthCond='Healthy') or (HealthCond='Sick'))
+);
+
+
+/* Blood Bank */
+
+
+create table BloodBank (
+	BID VARCHAR(8) CONSTRAINT BloodBank_BID_PK PRIMARY KEY,
+	BLID VARCHAR2(8),
+	BloodType VARCHAR2(3),
+	Quantity Number(1),
+	EntryDate Date,
+	ExpiryDate Date,
+	CONSTRAINT LAB_RID_FK FOREIGN KEY(BLID) REFERENCES Lab(LID)
+	ON DELETE SET NULL
+);

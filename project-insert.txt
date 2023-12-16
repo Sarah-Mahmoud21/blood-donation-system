@@ -1,0 +1,131 @@
+/* Reception Insert */
+
+INSERT INTO Reception
+VALUES ('R1');
+
+INSERT INTO Reception
+VALUES ('R2');
+
+INSERT INTO Reception
+VALUES ('R3');
+
+INSERT INTO Reception
+VALUES ('R4');
+
+INSERT INTO Reception
+VALUES ('R5');
+
+INSERT INTO Reception
+VALUES ('R6');
+
+INSERT INTO Reception
+VALUES ('R7');
+
+INSERT INTO Reception
+VALUES ('R8');
+
+INSERT INTO Reception
+VALUES ('R9');
+
+INSERT INTO Reception
+VALUES ('R10');
+
+INSERT INTO Reception
+VALUES ('R11');
+
+INSERT INTO Reception
+VALUES ('R12');
+
+INSERT INTO Reception
+VALUES ('R13');
+
+INSERT INTO Reception
+VALUES ('R14');
+
+INSERT INTO Reception
+VALUES ('R15');
+
+/* Donator */
+
+INSERT INTO Donators
+VALUES ('D1','R1','Ahmad',TO_DATE('13/7/2001','DD/MM/YYYY'),TO_DATE('15/6/2020','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Donators
+VALUES ('D2','R2','Ali',TO_DATE('13/7/2001','DD/MM/YYYY'),TO_DATE('15/6/2020','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Donators
+VALUES ('D3','R3','Sameer',TO_DATE('13/7/2001','DD/MM/YYYY'),TO_DATE('15/6/2020','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Donators
+VALUES ('D4','R4','Sarah',TO_DATE('13/7/2001','DD/MM/YYYY'),TO_DATE('15/6/2020','DD/MM/YYYY'),'Nablus',00972598075105,'F');
+
+INSERT INTO Donators
+VALUES ('D5','R5','Moneer',TO_DATE('13/7/2001','DD/MM/YYYY'),TO_DATE('15/6/2020','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+/* Patient */
+
+INSERT INTO Patients
+VALUES ('P1','R6','Ahmad',TO_DATE('13/7/2001','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Patients
+VALUES ('P2','R7','Ali',TO_DATE('13/7/2001','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Patients
+VALUES ('P3','R8','Sameer',TO_DATE('13/7/2001','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+INSERT INTO Patients
+VALUES ('P4','R9','Sarah',TO_DATE('13/7/2001','DD/MM/YYYY'),'Nablus',00972598075105,'F');
+
+INSERT INTO Patients
+VALUES ('P5','R10','Moneer',TO_DATE('13/7/2001','DD/MM/YYYY'),'Nablus',00972598075105,'M');
+
+/* Nurse */
+
+INSERT INTO Nurses
+VALUES ('N1','R11','Sarah');
+
+INSERT INTO Nurses
+VALUES ('N2','R12','Masa');
+
+INSERT INTO Nurses
+VALUES ('N3','R13','Mira');
+
+INSERT INTO Nurses
+VALUES ('N4','R14','Fatema');
+
+INSERT INTO Nurses
+VALUES ('N5','R15','Samia');
+
+/* Lab */
+
+INSERT INTO Lab
+VALUES ('L1','R1','A+','Healthy');
+
+INSERT INTO Lab
+VALUES ('L2','R2','AB+','Sick');
+
+INSERT INTO Lab
+VALUES ('L3','R5','B+','Healthy');
+
+INSERT INTO Lab
+VALUES ('L4','R7','O+','Sick');
+
+INSERT INTO Lab
+VALUES ('L5','R9','O-','Sick');
+
+/* Blood Bank */
+
+INSERT INTO BloodBank 
+VALUES ('B1','L1','A+',2,TO_DATE('23/7/2021','DD/MM/YYYY'),TO_DATE('6/8/2021','DD/MM/YYYY'));
+
+INSERT INTO BloodBank
+VALUES ('B2','L5','B+',1,TO_DATE('23/7/2021','DD/MM/YYYY'),TO_DATE('6/8/2021','DD/MM/YYYY'));
+
+INSERT INTO BloodBank 
+VALUES ('B3','L1','A+',1,TO_DATE('23/7/2021','DD/MM/YYYY'),TO_DATE('6/8/2021','DD/MM/YYYY'));
+
+INSERT INTO BloodBank
+VALUES ('B4','L5','B+',2,TO_DATE('23/7/2021','DD/MM/YYYY'),TO_DATE('6/8/2021','DD/MM/YYYY'));
+
+INSERT INTO BloodBank 
+VALUES ('B5','L1','A+',2,TO_DATE('23/7/2021','DD/MM/YYYY'),TO_DATE('6/8/2021','DD/MM/YYYY'));
